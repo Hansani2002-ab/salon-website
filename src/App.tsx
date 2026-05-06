@@ -13,8 +13,7 @@ function App() {
 
       <main>
         <Hero />
-        <Services />
-        <AppPromotion />
+        
       </main>
 
     
