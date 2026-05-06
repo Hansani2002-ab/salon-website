@@ -14,7 +14,7 @@ const Hero = () => {
     { title: 'Men', img: menImg, scale: 'scale-[1.9]' },
     { title: 'Women', img: womenImg },
     { title: 'Kids', img: kidsImg },
-    { title: 'Seniors', img: menImg }, // 4 weni image ekath thiyenam methana danna
+    { title: 'Seniors', img: menImg }, 
   ];
 
   return (
@@ -123,36 +123,7 @@ const Hero = () => {
         </div>
       </section>
 
-      {/* 3. PROMO SECTION */}
-      <section className="bg-gray-50 py-16 px-6 md:px-12 border-y border-gray-100">
-        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="max-w-xl text-center md:text-left">
-            <h2 className="text-[32px] md:text-[40px] font-black text-black leading-tight uppercase">
-              STAY IN THE LOOP
-            </h2>
-            <p className="mt-4 text-[16px] md:text-[18px] text-gray-700 font-medium">
-              Join the Great Clips® email list and get a 
-              <span className="font-extrabold"> $2 OFF coupon </span> 
-              for your next haircut.
-            </p>
-            <a 
-              href="#" 
-              className="mt-6 flex items-center justify-center md:justify-start gap-1 text-[16px] font-bold underline decoration-2 underline-offset-4"
-              style={{ color: brandGreen }}
-            >
-              Sign up for savings
-              <ChevronRight size={20} />
-            </a>
-          </div>
-
-          <div className="relative group overflow-hidden rounded-xl shadow-lg w-full md:w-[450px]">
-             <div className="bg-white aspect-[16/9] flex items-center justify-center text-gray-400 font-bold uppercase italic tracking-widest text-xl">
-               Special Offer
-             </div>
-          </div>
-        </div>
-      </section>
-
+     
     </div>
   );
 };
