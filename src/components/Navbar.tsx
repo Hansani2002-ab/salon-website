@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, ChevronDown, ExternalLink, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -13,12 +14,19 @@ const Navbar = () => {
     { title: 'Franchising', type: 'external' },
   ];
 
+ // to consider path
+  const getPath = (item: string) => {
+    if (item === 'Additional Services') return '/services';
+    if (item === 'Haircuts') return '/women-haircuts';
+    return '#';
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm w-full font-sans">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         
         {/* 1. Logo Section */}
-        <div className="flex flex-col leading-none cursor-pointer shrink-0 group">
+        <Link to="/" className="flex flex-col leading-none cursor-pointer shrink-0 group">
           <div className="flex items-start">
             <span className="text-[24px] md:text-[28px] font-bold text-black tracking-tight group-hover:text-[#006A52] transition-colors duration-300">
               Great Clips
@@ -31,7 +39,7 @@ const Navbar = () => {
             </span>
             <span className="text-[7px] ml-0.5 text-black">®</span>
           </div>
-        </div>
+        </Link>
 
         {/* 2. Desktop Navigation Links */}
         <div className="hidden lg:flex items-center gap-8 text-[14px] font-extrabold text-black ml-10">
@@ -50,9 +58,13 @@ const Navbar = () => {
               {link.type === 'dropdown' && (
                 <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-100 shadow-xl rounded-xl py-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
                   {link.items?.map((item) => (
-                    <a key={item} href="#" className="block px-5 py-2.5 hover:bg-green-50 hover:text-[#006A52] font-semibold text-[13px] transition-all duration-200">
+                    <Link 
+                      key={item} 
+                      to={getPath(item)} 
+                      className="block px-5 py-2.5 hover:bg-green-50 hover:text-[#006A52] font-semibold text-[13px] transition-all duration-200"
+                    >
                       {item}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -66,7 +78,6 @@ const Navbar = () => {
             Sign In
           </button>
           
-          {/* Main Action Button with Enhanced Hover */}
           <button 
             style={{ backgroundColor: brandGreen }} 
             className="text-white px-5 md:px-7 py-2.5 md:py-3 rounded-full flex items-center gap-2 text-[13px] md:text-[14px] font-extrabold shadow-md hover:shadow-[#006A52]/30 hover:shadow-lg hover:scale-[1.05] hover:brightness-110 active:scale-95 transition-all duration-300 shrink-0 group"
@@ -76,7 +87,6 @@ const Navbar = () => {
             <span className="sm:hidden text-[10px]">Find</span>
           </button>
 
-          {/* Mobile Menu Toggle Button */}
           <button 
             className="lg:hidden text-black hover:text-[#006A52] hover:rotate-90 transition-all duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -99,9 +109,14 @@ const Navbar = () => {
                 {link.type === 'dropdown' && (
                   <div className="flex flex-col gap-4 pl-4 border-l-2 border-gray-100">
                     {link.items?.map((item) => (
-                      <a key={item} href="#" className="text-[14px] font-semibold text-gray-500 hover:text-[#006A52] transition-colors">
+                      <Link 
+                        key={item} 
+                        to={getPath(item)}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-[14px] font-semibold text-gray-500 hover:text-[#006A52] transition-colors"
+                      >
                         {item}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import WomenHaircuts from './components/WomenHaircuts';
+import Services from './components/Services';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             </main>
           } />
           <Route path="/haircuts-for-women" element={<WomenHaircuts />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
       </div>
