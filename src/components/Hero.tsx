@@ -18,10 +18,10 @@ const Hero = () => {
 
   
   const categories = [
-    { title: 'Men', img: menImg, path: '/haircuts-for-men' },
-    { title: 'Women', img: womenImg, path: '/haircuts-for-women' },
-    { title: 'Kids', img: kidsImg, path: '/haircuts-for-kids' },
-    { title: 'Seniors', img: menImg, path: '/haircuts-for-seniors' }, 
+    { title: 'Men', img: menImg, path: '/services/men' },
+    { title: 'Women', img: womenImg, path: '/services/women' },
+    { title: 'Kids', img: kidsImg, path: '/services/kids' },
+    { title: 'Seniors', img: menImg, path: '/services/seniors' }, 
   ];
 
   const newsItems = [
@@ -214,33 +214,56 @@ const Hero = () => {
       </section>
 
       {/* 4. APP PROMOTION SECTION */}
-      <section className="bg-[#006A52] py-10 lg:py-20 px-4 md:px-12 lg:px-24 mt-20 lg:mt-40 relative overflow-visible flex items-center min-h-[400px] rounded-[2rem] lg:rounded-[2.5rem] mx-4 md:mx-10">
-        <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between w-full relative">
-          <div className="w-full lg:w-[45%] relative flex justify-center lg:justify-start mb-10 lg:mb-0 z-10">
-            <div className="relative w-full flex justify-center">
-              <img src={mockupImg} alt="App Mockup" className="relative lg:absolute w-[280px] md:w-[350px] lg:w-auto h-auto lg:h-[550px] max-w-none object-contain drop-shadow-[0_50px_60px_rgba(0,0,0,0.45)] scale-[1.3] md:scale-[1.4] lg:scale-[1.9] top-0 lg:top-1/2 transform lg:-translate-y-1/2 left-0 lg:left-0 lg:-translate-x-[15%]" />
+     {/* 4. APP PROMOTION SECTION */}
+<section className="bg-[#006A52] py-10 lg:py-20 px-4 md:px-12 lg:px-24 mt-20 lg:mt-40 relative overflow-visible flex items-center min-h-[400px] rounded-[2rem] lg:rounded-[2.5rem] mx-4 md:mx-10">
+  <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between w-full relative">
+    
+    {/* 1. Image Section - Image එකේ අගයන් කලින් තිබූ පරිදිම තබා ඇත */}
+    <div className="w-full lg:w-[45%] relative flex justify-center lg:justify-start mb-10 lg:mb-0 z-10">
+      <div className="relative w-full flex justify-center">
+        <img 
+          src={mockupImg} 
+          alt="App Mockup" 
+          className="relative lg:absolute w-[280px] md:w-[350px] lg:w-auto h-auto lg:h-[550px] max-w-none object-contain drop-shadow-[0_50px_60px_rgba(0,0,0,0.45)] scale-[1.3] md:scale-[1.4] lg:scale-[1.9] top-0 lg:top-1/2 transform lg:-translate-y-1/2 left-0 lg:left-0 lg:-translate-x-[15%]" 
+        />
+      </div>
+    </div>
+
+    {/* 2. White Box Section - මෙය දකුණට තල්ලු කර ඇත */}
+    <div className="w-full lg:w-[55%] flex justify-center lg:justify-end z-20 mt-10 lg:mt-0 relative transform lg:translate-x-16">
+      <div className="bg-white rounded-[1.5rem] p-8 md:p-14 shadow-2xl w-full max-w-[800px] relative z-30">
+        <h5 className="text-[#006A52] font-semibold text-[16px] lg:text-[20px] uppercase mb-4">Download the App</h5>
+        <h2 className="text-[28px] md:text-[36px] lg:text-[46px] font-black text-gray-900 leading-[1.1] mb-6">
+          Quick and easy check-in <br className="hidden md:block" /> when you're on the go
+        </h2>
+        <p className="text-gray-600 text-[15px] lg:text-[19px] leading-relaxed mb-10 font-medium">
+          Spend less time waiting and more time on what matters to you. With the Great Clips app, you can check in with just a few taps.
+        </p>
+        
+        <form className="space-y-6" onSubmit={handleEmailSubmit}>
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-end"> 
+            <div className="flex-grow w-full">
+              <label className="block text-[12px] font-extrabold text-[#006A52] mb-2 uppercase tracking-widest text-left">Email Address*</label>
+              <input 
+                type="text" 
+                placeholder="email" 
+                value={email} 
+                onChange={(e) => { setEmail(e.target.value); if (error) setError(""); }} 
+                className={`w-full px-6 py-4 rounded-full border-2 bg-gray-50 outline-none font-bold text-[18px] transition-all ${error ? 'border-red-500' : 'border-gray-100 focus:border-[#006A52]'}`} 
+              />
             </div>
+            <button type="submit" className="bg-[#006A52] text-white font-black px-10 py-4 rounded-full transition-all shadow-lg hover:bg-[#004d3b] whitespace-nowrap">
+              Email a link
+            </button>
           </div>
-          <div className="w-full lg:w-[55%] flex justify-center lg:justify-end z-20 mt-10 lg:mt-0 relative">
-            <div className="bg-white rounded-[1.5rem] p-8 md:p-14 shadow-2xl w-full max-w-[800px] relative z-30">
-              <h5 className="text-[#006A52] font-semibold text-[16px] lg:text-[20px] uppercase mb-4">Download the App</h5>
-              <h2 className="text-[28px] md:text-[36px] lg:text-[46px] font-black text-gray-900 leading-[1.1] mb-6">Quick and easy check-in <br className="hidden md:block" /> when you're on the go</h2>
-              <p className="text-gray-600 text-[15px] lg:text-[19px] leading-relaxed mb-10 font-medium">Spend less time waiting and more time on what matters to you. With the Great Clips app, you can check in with just a few taps.</p>
-              <form className="space-y-6" onSubmit={handleEmailSubmit}>
-                <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-end"> 
-                  <div className="flex-grow w-full">
-                    <label className="block text-[12px] font-extrabold text-[#006A52] mb-2 uppercase tracking-widest text-left">Email Address*</label>
-                    <input type="text" placeholder="email" value={email} onChange={(e) => { setEmail(e.target.value); if (error) setError(""); }} className={`w-full px-6 py-4 rounded-full border-2 bg-gray-50 outline-none font-bold text-[18px] transition-all ${error ? 'border-red-500' : 'border-gray-100 focus:border-[#006A52]'}`} />
-                  </div>
-                  <button type="submit" className="bg-[#006A52] text-white font-black px-10 py-4 rounded-full transition-all shadow-lg hover:bg-[#004d3b] whitespace-nowrap">Email a link</button>
-                </div>
-                {error && <p className="text-red-500 text-[13px] font-bold uppercase text-left">{error}</p>}
-                {isSubmitted && !error && <p className="text-green-600 text-[13px] font-bold uppercase text-left">Link sent! Check your inbox.</p>}
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+          {error && <p className="text-red-500 text-[13px] font-bold uppercase text-left">{error}</p>}
+          {isSubmitted && !error && <p className="text-green-600 text-[13px] font-bold uppercase text-left">Link sent! Check your inbox.</p>}
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* 5. GREAT NEWS SECTION */}
       <section className="bg-[#f4f9f7] py-24 px-6 mt-20 lg:mt-40">

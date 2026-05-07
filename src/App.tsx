@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import WomenHaircuts from './components/WomenHaircuts';
+import ServiceCard from './components/ServiceCard';
 import Services from './components/Services';
 
 function App() {
@@ -17,7 +17,8 @@ function App() {
               
             </main>
           } />
-          <Route path="/haircuts-for-women" element={<WomenHaircuts />} />
+          
+          <Route path="/services/:category" element={<ServiceCard />} />
           <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
