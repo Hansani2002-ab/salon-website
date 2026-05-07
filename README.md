@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# 💇‍♀️ Great Clips Landing Page Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive landing page inspired by Great Clips, built using React and Tailwind CSS.  
+The project is structured into reusable components following modern frontend best practices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📁 Project Setup
 
-## React Compiler
+### 1. Clone the repository
+git clone https://github.com/Hansani2002-ab/salon-website/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Navigate to the project folder
+cd salon-page
 
-## Expanding the ESLint configuration
+### 3. Install dependencies
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 4. Start development server
+npm run dev
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 5. Open in browser
+http://localhost:5173
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React.js – Component-based UI
+- Tailwind CSS – Utility-first styling
+- Vite – Fast development tool
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 Why Tailwind CSS?
+
+- Fast UI development
+- Easy responsive design (sm, md, lg)
+- Easy custom styling (brand colors like #006A52)
+- Clean reusable components
+
+---
+
+## 🧩 Key Features & Components
+
+Navbar – Responsive navigation with mobile support  
+Hero Section – Main landing CTA section  
+ServiceCard – Reusable service display component  
+AppPromotion – Email validation + overlapping device mockups  
+Footer – Links and social media section  
+
+---
+
+## 🎯 Design Highlights
+
+- Fully responsive design
+- Clean UI layout
+- Component-based structure
+- Pixel-perfect landing page clone
+
+---
+
+## 📦 Folder Structure
+
+src/
+│── components/
+│    ├── Navbar
+│    ├── Hero
+│    ├── ServiceCard
+│    ├── Services
+│    └── Footer
+│
+│── pages/
+│── assets/
+│── App.jsx
+│── main.jsx
+
+---
+
+## ✨ Author
+
+Built with ❤️ using React & Tailwind CSS
