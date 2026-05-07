@@ -3,7 +3,7 @@ import { ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   const brandGreen = '#006A52';
-  const darkGreen = '#003d2f'; // තද කොළ පාට (App promo box එකට)
+  const darkGreen = '#003d2f'; 
 
   // Social Icons with currentColor logic
   const XIcon = () => (

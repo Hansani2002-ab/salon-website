@@ -325,10 +325,10 @@ const Services = () => {
 <section className="bg-[#006A52] py-16 px-6 font-sans">
   <div className="max-w-[1100px] mx-auto">
     
-    {/* Height එක අඩු කළ White Card - padding අඩු කර ඇත */}
+   
     <div className="bg-white rounded-[2.5rem] p-10 md:p-14 shadow-2xl text-center flex flex-col items-center">
       
-      {/* Icon එකත් පොඩ්ඩක් කුඩා කළා */}
+      
       <div className="mb-6 text-[#006A52]">
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M7 18v-6a5 5 0 1 1 10 0v6"></path>

@@ -86,9 +86,13 @@ const ServiceCard = () => {
             <p className="text-gray-500 font-bold text-[10px] md:text-xs mb-6 uppercase tracking-widest leading-none">
               {haircut.tags}
             </p>
-            <a href="#" className="mt-auto text-[#006A52] font-black text-sm md:text-base flex items-center justify-center gap-1 group-hover:gap-2 transition-all duration-300">
-              Check it out <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </a>
+           <a 
+              href="#" 
+              onClick={(e) => e.preventDefault()} 
+              className="mt-auto text-[#006A52] font-black text-sm md:text-base flex items-center justify-center gap-1 group-hover:gap-2 transition-all duration-300"
+            >
+            Check it out <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">→</span>
+         </a>
           </div>
         </div>
       ))}

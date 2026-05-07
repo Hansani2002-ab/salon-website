@@ -214,11 +214,11 @@ const Hero = () => {
       </section>
 
       {/* 4. APP PROMOTION SECTION */}
-     {/* 4. APP PROMOTION SECTION */}
+     
 <section className="bg-[#006A52] py-10 lg:py-20 px-4 md:px-12 lg:px-24 mt-20 lg:mt-40 relative overflow-visible flex items-center min-h-[400px] rounded-[2rem] lg:rounded-[2.5rem] mx-4 md:mx-10">
   <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between w-full relative">
     
-    {/* 1. Image Section - Image එකේ අගයන් කලින් තිබූ පරිදිම තබා ඇත */}
+    
     <div className="w-full lg:w-[45%] relative flex justify-center lg:justify-start mb-10 lg:mb-0 z-10">
       <div className="relative w-full flex justify-center">
         <img 
@@ -229,7 +229,7 @@ const Hero = () => {
       </div>
     </div>
 
-    {/* 2. White Box Section - මෙය දකුණට තල්ලු කර ඇත */}
+    
     <div className="w-full lg:w-[55%] flex justify-center lg:justify-end z-20 mt-10 lg:mt-0 relative transform lg:translate-x-16">
       <div className="bg-white rounded-[1.5rem] p-8 md:p-14 shadow-2xl w-full max-w-[800px] relative z-30">
         <h5 className="text-[#006A52] font-semibold text-[16px] lg:text-[20px] uppercase mb-4">Download the App</h5>
